@@ -38,6 +38,7 @@ h1{
   inline-size: 100%;
   aspect-ratio: 16/9;
   vertical-align: middle;
+  object-fit: cover;
   
 }
 
@@ -57,6 +58,7 @@ h1{
   justify-content: center;
   align-items: center;
   z-index: 2;
+  gap: 20px;
 }
 
 .player-progress {
@@ -72,4 +74,20 @@ h1{
 
 .player-progress input {
   flex: 1;
+  z-index: 2;
+}
+
+.player-progress:hover input{
+  cursor: pointer;
+}
+
+.player-overlay {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: .5s opacity;
+}
+
+.player:hover .player-overlay {
+  opacity: 1;
 }

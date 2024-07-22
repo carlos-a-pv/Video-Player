@@ -5,6 +5,8 @@ const $pause = document.querySelector("#pause");
 const $backward = document.querySelector("#backward");
 const $forward = document.querySelector("#forward");
 
+const $progress = document.querySelector("#progress");
+
 $play.addEventListener("click", () =>{
     $video.play();
     $play.hidden = true;
@@ -18,9 +20,21 @@ $pause.addEventListener("click", () =>{
 })
 
 $backward.addEventListener("click", () =>{{
-    $video.currentTime -= 10
+    $video.currentTime -= 10;
 }})
 
 $forward.addEventListener("click", () =>{{
-    $video.currentTime += 10
+    $video.currentTime += 10;
 }})
+
+$video.addEventListener("loadedmetadata", () =>{
+    $progress.max = $video.duration;
+})
+
+$video.addEventListener("timeupdate", () =>{
+    $progress.value = $video.currentTime;
+})
+
+$progress.addEventListener("input", () =>{
+    $video.currentTime = $progress.value;
+})

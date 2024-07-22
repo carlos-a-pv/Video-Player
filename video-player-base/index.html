@@ -14,18 +14,20 @@
 <div class="wrapper">
   <div class="player">
     <video src="./videos/lofi.mp4" poster="./images/poster.jpg"></video>
-    <div class="player-title">
-      <h2>Música para programar</h2>
-    </div>
-    <div class="player-actions">
-      <button title="Retrocer 10 segundos" aria-label="Retroceder 10 segundos" class="button" id="backward"></button>
-      <button title="Pausar" aria-label="Pausar video" class="button" id="pause" hidden> </button>
-      <button title="Reproducir" aria-label="Reproducir video" class="button" id="play"></button>
-      <button title="Adelantar 10 segundos"aria-label="Adelantar 10 segundos" class="button" id="forward"></button>
-    </div >
-    <div class="player-progress">
-      
-      <input type="range"  >
+    <div class="player-overlay">
+      <div class="player-title">
+        <h2>Música para programar</h2>
+      </div>
+      <div class="player-actions">
+        <button title="Retrocer 10 segundos" aria-label="Retroceder 10 segundos" class="button" id="backward"></button>
+        <button title="Pausar" aria-label="Pausar video" class="button" id="pause" hidden> </button>
+        <button title="Reproducir" aria-label="Reproducir video" class="button" id="play"></button>
+        <button title="Adelantar 10 segundos"aria-label="Adelantar 10 segundos" class="button" id="forward"></button>
+      </div >
+      <div class="player-progress">
+        
+        <input id="progress" type="range"  min="0" step=".5 " value="0">
+      </div>
     </div>
   </div>
 </div>
